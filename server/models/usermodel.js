@@ -18,7 +18,7 @@ const UserModel = {
          RETURNING id, email, name, role, created_at`,
         [email, hashPassword, name, role]
       );
-
+      
       return rows[0];
     } catch (error) {
       if (error.code === "23505") {
